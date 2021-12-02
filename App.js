@@ -3,9 +3,7 @@ import React from 'react';
 import { StyleSheet, Text, TextInput, View, Button,Image } from 'react-native';
 
 export default function App() {
-  var textInputValue = "<answer goes here>";
-  const handlePress = () => console.log(textInputValue);
-  const handleChangeText =() => console.log(textInputValue);
+ 
   return (
     <View style={styles.container}>
      <View style={{backgroundColor: "lightblue", paddingBottom:"2rem", paddingTop:"1rem",marginTop:"2rem"}}>      
@@ -16,9 +14,9 @@ export default function App() {
      </View>
        <Text style={{marginTop:"2rem", fontWeight:"bold"}}>What would you like to get out of this course?
        </Text> 
-       <view style={{backgroundColor:"#F5F0F0", height:"20%",width:"80%"}}>
-       <TextInput placeholder="Initial Text" onChangeText={handleChangeText}/>
-       </view>
+       <View style={{backgroundColor:"#F5F0F0", height:"20%",width:"80%"}}>
+       <TextInput placeholder="Initial Text" />
+       </View>
        <Text style={{fontWeight:"bold", marginTop:"2rem"}}>An emoji descripbing how you are feeling about the course:</Text>
        <Image source={{uri: 'https://media.istockphoto.com/photos/abstract-technology-blue-spotlight-backgrounds-loopable-elements-4k-picture-id1174989484?b=1&k=20&m=1174989484&s=170667a&w=0&h=xe1cvmwKDQGcfsxhiukjYP8PrDEyQ52at9-epfX56y4='}}
                style={{width: 100, height: 100}}></Image>
@@ -34,8 +32,6 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    height:400,
-    width:350,
     backgroundColor: '#96E4F3',
     alignItems: '',
     justifyContent: '',
